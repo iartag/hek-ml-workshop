@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <title>p5.js example</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            background: black;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+
+            /* This centers our sketch horizontally. */
+            justify-content: center;
+
+            /* This centers our sketch vertically. */
+            align-items: center;
+        }
+
+        #liveStream {
+            /*width: 320px;*/
+            /*height: 240px;*/
+            visibility: hidden;
+        }
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+    <script src="sketch.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- <img id="liveStream" src="http://10.1.4.94:8081" crossorigin="anonymous"> -->
+    <img id="liveStream" src="https://uc748ff1ef03fa655610fd527766.previews.dropboxusercontent.com/p/thumb/AAZODy5s3wmywWO-VpJ60YhT1r7LaodXINGBU-BL-DnOfdpAPgyBGWBT3cFVMzTh-6-kiO2DCx3HCwVetXGk4xoy5PfB-q_eyh38_bRqVQo8guxCsIbYXOrkS4KQMKjFDehJ_3JtfLGUouXELMeps0NfIugaXN5UPGkMT4k0OXIH4luvnIKb6XkUO4Z4beqRf00mrVrQe-qebwn6bHptNUKW3jXWpQS1tnfE3G8JkFVXoHNmckbtdusANIXiKnVdO_jpq_OabKtMz0R3wVJBFNgxxvrPjgnHNNGt6ZdzWoF22O9CAq7uQMb1XQ5sEZmLLR9HWWziRwpS__D4qtiddTyYcY1YeNdh1ZZoyp1SdtdOGESc7e6HpCToa-wOFTP4I9_siRxW4YnA_rbT_KpcFJMK6FilVrHvj5wBxvlYR6YNHb6l5bEX-SQSCnHe3IK28AaaUYiWFXNyFVgoZT8BpJ-9AQYm2N2lvX4z7vUtFmyUuxXMTi0qq7ZKM-9f4nazkog8eAl1qCP1rX1s5zgRGPbnUROQcWa6QhN5TWjKN8NHRg87NnxhJT3JTTHruyW2zNcE-v1SlXtiFiqNHc7oVkCsZYxOhK5HQqLI-1YJ3vMZqpPYWEF8_ZNOapnslWNGE5n2chfp__Yt8SXnUoF4hflI386Soj5SAVp_Eex2NiEyad2guTXSOW0clMAqmFTn3A9bhmu5psFCHN90g2b6apWMCapXZdBjbo1yUD9JUNMyqGj44iliVRKvUvTsjIGSEWlQdl69if9eE64rGnLAX7hKSblkyu8tG7ICqhNThfe23T5Xxc_NxoAsmfA-d6asC2ifav_5aOSmVBm6vrJFEcAtA_q2X-LrhOJyA1yCYMS0C3-6xT4mRHgsgVNBqdXy6xCxeJZZ_x6EDXqG9KBWWG_rxfQX5w-QV3SEgMkRcjK0iIpWqlbAGBWhM8l_DnMBjnH46iSixe5fKkkWsxkL7gPBa34MRfYglHdzR9otU15xP2tv_UPdCZ4F8eMU6IppWZEWQoAuuPWpQ0GmFr5HaxuYCMrQrqnR23sARIwMKOqpU3SuIWMCKtJrZ6CW-DVpkDmzpNxDTl4YFL1Kjy4A4HzN4PSeN-0AT6vfx1IuR0-KkFMZN9GxG0oSyIGlBTx27pmC3qFu7W6_qkicuudEds-4WIwUMyWt0qc5g9JO973e2wmECClt5Rv28dCMo7H1LCQKe4DN8o4n_LLlR_IMRiMJ1_ecb5Fc1mW5YkITYLaemTiPdcK60bcfVJDdQHX3QpHdUhAKTJZiOjD_wkISx-M5zoXMeD4Sg5MvS_P84R81m07s0DvJSubEO2no1kU1JzH7Mzcl_QaGmr7ILSY3yeVb5sU99bZvRVkzTDuSG6XGlirWZ-n0e05fEmSR70i7Gcn-W4589Pw0UpX9ugjWZ9k-bHoFMyYCybdHS9m1LMXgf8abgiesYg7CTlcQcHg-cCOdvv1LmdqEDj9a4ySmLPtqG0KqOsFrbjdpQdwCAbhuUA/p.jpeg?size_mode=1" crossorigin="anonymous" >
+    <div id="p5Container"></div>
+
+</body>
+
+</html>
