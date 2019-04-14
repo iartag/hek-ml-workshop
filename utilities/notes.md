@@ -16,10 +16,10 @@ Create a v4l2 device for the camera (make cam availables at `/dev/video0` )
 ```terminal
 sudo modprobe bcm2835-v4l2
 ```
+Add `bcm2835-v4l2` to `/etc/modules` to load module at boot time.
 
 [Camera setup](https://www.raspberrypi.org/documentation/configuration/camera.md)  
 [Camera doc + troubleshooting](https://www.raspberrypi.org/documentation/raspbian/applications/camera.md)
-
 
 ## Misc
 
