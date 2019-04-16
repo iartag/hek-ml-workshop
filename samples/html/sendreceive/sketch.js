@@ -1,6 +1,8 @@
 let pg;
 let socket;
 let liveStream;
+let canvasWidth = 740;
+let canvasHeight = 360;
 
 setInterval(sendImage, 100);
 
@@ -11,11 +13,11 @@ function sendImage() {
 }
 
 function setup() {
-    let canvas = createCanvas(320, 240);
+    let canvas = createCanvas(canvasWidth, canvasHeight);
     canvas.parent('p5Container');
     pixelDensity(1);
 
-    pg = createGraphics(320, 240);
+    pg = createGraphics(canvasWidth, canvasHeight);
 
     socket = io.connect("http://localhost:3002");
 }
@@ -26,7 +28,7 @@ function draw() {
 
     liveStream = select('#liveStream');
     if (liveStream)
-        pg.image(liveStream, 0, 0, 320, 240);
+        pg.image(liveStream, 0, 0, canvasWidth, canvasHeight);
 
     image(pg, 0, 0);
 
