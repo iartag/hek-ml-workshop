@@ -1,14 +1,19 @@
 let pg;
 let socket;
 let liveStream;
-let canvasWidth = 740;
-let canvasHeight = 360;
+let canvasWidth = 640;
+let canvasHeight = 480;
 
-setInterval(sendImage, 100);
+// socket.on('message', function (message) {
+//     sendObject();
+// });
+
+// function sendObject() {
+// }
 
 function sendImage() {
     socket.emit('query', {
-        "image": pg.canvas.toDataURL('image/jpeg')
+        "contentImage": pg.canvas.toDataURL('image/jpeg')
     });
 }
 
@@ -19,7 +24,11 @@ function setup() {
 
     pg = createGraphics(canvasWidth, canvasHeight);
 
-    socket = io.connect("http://localhost:3002");
+    socket = io.connect("http://localhost:3006");
+    socket.on("connect", function () {
+        setInterval(sendImage, 100);
+    });
+
 }
 
 
