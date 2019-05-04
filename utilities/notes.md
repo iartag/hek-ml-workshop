@@ -42,3 +42,4 @@ uname -a
 * [Chrome extension](https://www.webscraper.io/) - Does not seem too work so much anymore
 * [RipMe](https://github.com/4pr0n/ripme) - Works well but no success with ig :broken_heart:
 * [Thread on ig image dl](https://github.com/ytdl-org/youtube-dl/issues/9337#issuecomment-440888272)
+* [Instaloader](https://github.com/instaloader/instaloader) - Instagram image download, great success with ig :heart:
