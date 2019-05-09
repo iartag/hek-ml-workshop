@@ -21,5 +21,7 @@ All the info regarding the workshop as well as direct links to learning material
 │   └── slides            (slides of the presentations)
 │       ├── demos
 │       └── static        (img, etc.. for slides)
-└── samples               (code sample tba)
+├── samples               (code sample tba)
+└── utilities             (scripts and notes)
+
 ```

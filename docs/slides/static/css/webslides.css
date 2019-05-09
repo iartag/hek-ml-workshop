@@ -783,6 +783,18 @@ Auto-fill & Equal height === */
 /*============================
 2. TYPOGRAPHY & LISTS
 ============================== */
+
+@font-face {
+  font-family: Akkurat;
+  src: url("../fonts/akkurat.ttf");
+  font-weight: 100;
+} 
+@font-face {
+  font-family: AkkuratMonoVoid;
+  src: url("../fonts/akkuratmonovoid.ttf");
+  font-weight: 100;
+} 
+
 html,
 body {
   font-weight: 300;
@@ -794,7 +806,7 @@ body,
 input,
 select,
 textarea {
-  font-family: 'Roboto', 'San Francisco', helvetica, arial, sans-serif;
+  font-family: 'Akkurat', 'San Francisco', helvetica, arial, sans-serif;
   font-size: 62.5%; }
 
 body,
@@ -812,6 +824,11 @@ textarea,
 label {
   line-height: 3.2rem;
   margin-bottom: 3.2rem; }
+
+h1,
+h2 {
+  line-height: 1.6rem;
+  margin-bottom: 1.6rem; }
 
 li,
 p:last-child {
@@ -859,6 +876,7 @@ h4 svg {
   margin-top: -.4rem; }
 
 h1 {
+  font-family: 'AkkuratMonoVoid', 'San Francisco', helvetica, arial, sans-serif;
   font-size: 4rem;
   line-height: 5.6rem; }
   @media (min-width: 768px) {
@@ -870,6 +888,7 @@ h1 span {
   font-style: italic; }
 
 h2 {
+  font-family: 'AkkuratMonoVoid', 'San Francisco', helvetica, arial, sans-serif;  
   font-size: 3.2rem;
   line-height: 4.8rem; }
   @media (min-width: 768px) {
@@ -1074,11 +1093,14 @@ h1 span {
 
 /* -- h1,h2... Promo/Landings -- */
 .text-landing {
+  font-family: Akk
   letter-spacing: .4rem;
   text-transform: uppercase; }
   @media (min-width: 768px) {
-    .text-landing {
-      letter-spacing: 1.6rem; } }
+/*    .text-landing {
+      letter-spacing: 1.6rem; 
+    } */
+  }
 
 /* -- Subtitle (Before h1, h2) p.subtitle + h1/h2 */
 .text-subtitle {
@@ -3221,20 +3243,28 @@ Slides - Backgrounds <section class="bg-primary">
 /*Covers/Longforms...*/
 .bg-trans-gradient {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(transparent));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); }
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%); 
+}
 
 /*Horizontal Gradient*/
 .bg-gradient-h {
-  background: linear-gradient(134deg, #32b 0, #62b 100%); }
+  /*background: linear-gradient(134deg, #32b 0, #62b 100%); */
+  background: linear-gradient(134deg, #6ee 0, #112 100%); 
+}
 
 /*Vertical Gradient*/
 .bg-gradient-v {
-  background: -webkit-gradient(linear, left bottom, left top, from(#62b), to(#32b));
-  background: linear-gradient(to top, #62b 0%, #32b 100%); }
+/*  background: -webkit-gradient(linear, left bottom, left top, from(#62b), to(#32b));
+  background: linear-gradient(to top, #62b 0%, #32b 100%); 
+*/  background: -webkit-gradient(linear, left bottom, left top, from(#112), to(#6ee));
+  background: linear-gradient(to top, #112 0%, #6ee 100%);
+}
 
 /*Radial Gradient*/
 .bg-gradient-r {
-  background: radial-gradient(ellipse at center, #62b 0%, #32b 100%); }
+  /*background: radial-gradient(ellipse at center, #62b 0%, #32b 100%); */
+  background: radial-gradient(ellipse at center, #112 0%, #6ee 100%); 
+}
 
 /*White Gradient (vertical)*/
 .bg-gradient-white {
