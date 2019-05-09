@@ -1325,15 +1325,17 @@ header[role='banner'] {
 .logo {
   text-transform: lowercase; }
   .logo a {
-    background: url("../images/logos/hslu.svg") no-repeat 0 0;
-    background-size: 9.8rem;
+    background: url("../images/logos/iart-logo.png") no-repeat 0 0;
+    background-size: 19.8rem;
+    background-position: center;
     float: left;
     height: 4.8rem;
-    text-indent: -4000px;
+    /* text-indent: -4000px; */
     /*If you remove text-indent and add: */
     /*padding-left: 6rem;*/
-    vertical-align: middle;
-    width: 9.8rem; }
+    vertical-align: text-bottom;
+    width: 19.8rem;
+    }
 
 /*=========================================
 4. Navigation
