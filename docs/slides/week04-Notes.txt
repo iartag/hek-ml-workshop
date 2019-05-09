@@ -1,0 +1,138 @@
+STATUS QUO
+------
+How did it go? 'What questions do you have?' 
+
+
+------
+CNN Examples
+------
+Convolutional Neural Networks (ConvNets or CNNs) are a category of Neural Networks that have proven very effective in areas such as image recognition and classification. ConvNets have been successful in identifying faces, objects and traffic signs apart from powering vision in robots and self driving cars.
+
+
+------
+The LeNet Architecture (1990s)
+------
+LeNet was one of the very first convolutional neural networks which helped propel the field of Deep Learning. This pioneering work by Yann LeCun was named LeNet5 after many previous successful iterations since the year 1988 [3]. At that time the LeNet architecture was used mainly for character recognition tasks such as reading zip codes, digits, etc.
+
+
+------
+Local Patterns
+------
+The fundamental difference between a densely-connected layer and a convolution layer is this: dense layers learn global patterns in their input feature space (e.g. for a MNIST digit, patterns involving all pixels), while convolution layers learn local patterns (see  Figure 5.1 ” ), i.e. in the case of images, patterns found in small 2D windows of the inputs. In our example above, these windows were all 3x3.
+
+
+------
+Abstract visual concepts
+------
+This key characteristic gives convnets two interesting properties:
+
+. The patterns they learn are translation-invariant, i.e. after learning a certain pattern in the bottom right corner of a picture, a convnet is able to recognize it anywhere, e.g. in the top left corner. A densely-connected network would have to learn the pattern anew if it appeared at a new location. This makes convnets very data-efficient when processing images (since the visual world is fundamentally translation-invariant): they need less training samples to learn representations that have generalization power.
+
+. They can learn spatial hierarchies of patterns a first convolution layer will learn small local patterns such as edges, but a second convolution layer will learn larger patterns made of the features of the first layers. And so on. This allows convnets to efficiently learn increasingly complex and abstract visual concepts (since the visual world is fundamentally spatially hierarchical).
+
+
+------
+Feature map
+------
+In our MNIST example, the very first convolution layer takes a feature map of size (28, 28, 1) and outputs a feature map of size (26, 26, 32), i.e. it computes 32 "filters" over its input. Each of these 32 output channels contains a 26x26 grid of values, which is a "response map" of the filter over the input, indicating the response of that filter pattern at different locations in the input ( Figure 5.3  ). 
+
+That is what the term "feature map" really means: every dimension in depth axis is a feature (or filter), and the 2D tensor output[:, :, n] is the 2D spatial "map" of the response of this filter over the input.
+
+
+------
+CNN - Problems
+------
+First, the good news is that our “8” recognizer really does work well on simple images where the letter is right in the middle of the image:
+Our “8” recognizer totally fails to work when the letter isn’t perfectly centered in the image. Just the slightest position change ruins everything:
+
+
+------
+CNN - Idea 01
+------
+We already created a really good program for finding an “8” centered in an image. What if we just scan all around the image for possible “8”s in smaller sections, one section at a time, until we find one?
+This approach called a sliding window. It’s the brute force solution. It works well in some limited cases, but it’s really inefficient. You have to check the same image over and over looking for objects of different sizes. We can do better than this!
+
+
+------
+CNN - Idea 02
+------
+When we trained our network, we only showed it “8”s that were perfectly centered. What if we train it with more data, including “8”s in all different positions and sizes all around the image?
+We don’t even need to collect new training data. We can just write a script to generate new images with the “8”s in all kinds of different positions in the image:
+Using this technique, we can easily create an endless supply of training data.
+More data makes the problem harder for our neural network to solve, but we can compensate for that by making our network bigger and thus able to learn more complicated patterns.
+But even though we can make our neural network really big and train it quickly with a 3d graphics card, that still isn’t going to get us all the way to a solution. We need to be smarter about how we process images into our neural network.
+There should be some way to make the neural network smart enough to know that an “8” anywhere in the picture is the same thing without all that extra training. Luckily… there is!
+
+
+------
+CNN - Step 0
+------
+As a human, you intuitively know that pictures have a hierarchy or conceptual structure. Consider this picture:
+
+As a human, you instantly recognize the hierarchy in this picture:
+. The ground is covered in grass and concrete
+. There is a child
+. The child is sitting on a bouncy horse
+. The bouncy horse is on top of the grass
+
+Most importantly, we recognize the idea of a child no matter what surface the child is on. We don’t have to re-learn the idea of child for every possible surface it could appear on.
+But right now, our neural network can’t do this. It thinks that an “8” in a different part of the image is an entirely different thing. It doesn’t understand that moving an object around in the picture doesn’t make it something different. This means it has to re-learn the identify of each object in every possible position. That sucks.
+
+
+------
+CNN - Step 01
+------
+Instead of feeding entire images into our neural network as one grid of numbers, we’re going to do something a lot smarter that takes advantage of the idea that an object is the same no matter where it appears in a picture.
+
+
+------
+CNN - Step 02
+------
+However, there’s one big twist: We’ll keep the same neural network weights for every single tile in the same original image. In other words, we are treating every image tile equally. If something interesting appears in any given tile, we’ll mark that tile as interesting.
+
+
+------
+CNN - Step 03
+------
+We don’t want to lose track of the arrangement of the original tiles. So we save the result from processing each tile into a grid in the same arrangement as the original image. It looks like this:
+In other words, we’ve started with a large image and we ended with a slightly smaller array that records which sections of our original image were the most interesting.
+
+
+------
+CNN - Step 04
+------
+The result of Step 3 was an array that maps out which parts of the original image are the most interesting. But that array is still pretty big:
+To reduce the size of the array, we downsample it using an algorithm called max pooling. It sounds fancy, but it isn’t at all!
+We’ll just look at each 2x2 square of the array and keep the biggest number:
+The idea here is that if we found something interesting in any of the four input tiles that makes up each 2x2 grid square, we’ll just keep the most interesting bit. This reduces the size of our array while keeping the most important bits.
+
+
+-----
+CNN - Final step
+-----
+So far, we’ve reduced a giant image down into a fairly small array.
+Guess what? That array is just a bunch of numbers, so we can use that small array as input into another neural network. This final neural network will decide if the image is or isn’t a match. To differentiate it from the convolution step, we call it a “fully connected” network.
+So from start to finish, our whole five-step pipeline looks like this:
+
+
+-----
+CNN - Covolution
+-----
+Take a moment to understand how the computation above is being done. We slide the orange matrix over our original image (green) by 1 pixel (also called ‘stride’) and for every position, we compute element wise multiplication (between the two matrices) and add the multiplication outputs to get the final integer which forms a single element of the output matrix (pink). Note that the 3×3 matrix “sees” only a part of the input image in each stride.
+
+In CNN terminology, the 3×3 matrix is called a ‘filter‘ or ‘kernel’ or ‘feature detector’ and the matrix formed by sliding the filter over the image and computing the dot product is called the ‘Convolved Feature’ or ‘Activation Map’ or the ‘Feature Map‘. It is important to note that filters acts as feature detectors from the original input image.
+
+It is evident from the animation above that different values of the filter matrix will produce different Feature Maps for the same input image. As an example, consider the following input image:
+
+
+-----
+CNN - Parameters
+-----
+The size of the Feature Map (Convolved Feature) is controlled by three parameters [4] that we need to decide before the convolution step is performed:
+
+Depth: Depth corresponds to the number of filters we use for the convolution operation. In the network shown in Figure 7, we are performing convolution of the original boat image using three distinct filters, thus producing three different feature maps as shown. You can think of these three feature maps as stacked 2d matrices, so, the ‘depth’ of the feature map would be three.
+Screen Shot 2016-08-10 at 3.42.35 AM
+
+Stride: Stride is the number of pixels by which we slide our filter matrix over the input matrix. When the stride is 1 then we move the filters one pixel at a time. When the stride is 2, then the filters jump 2 pixels at a time as we slide them around. Having a larger stride will produce smaller feature maps.
+Zero-padding: Sometimes, it is convenient to pad the input matrix with zeros around the border, so that we can apply the filter to bordering elements of our input image matrix. A nice feature of zero padding is that it allows us to control the size of the feature maps. Adding zero-padding is also called wide convolution, and not using zero-padding would be a narrow convolution. This has been explained clearly in [14].
+

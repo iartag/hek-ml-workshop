@@ -1,0 +1,982 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/webslides/webslides
+
+      Thanks!
+      -->
+
+    <!-- SEO -->
+    <title>Week 01 | Computer Perception Extended</title>
+    <meta name="description" content="Computer Perception Extended - Winter 2018">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/webslides.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type="text/css" media="all" href="static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="#"> <!-- EDIT -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Computer Perception Extended @ DI"> <!-- EDIT -->
+    <meta property="og:description" content="Week 01"> <!-- EDIT -->
+    <meta property="og:updated_time" content="2018-09-24"> <!-- EDIT -->
+    <meta property="og:image" content=" static/images/share-webslides.jpg" > <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@digideation"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@digideation"> <!-- EDIT -->
+    <meta name="twitter:title" content="Computer Perception Extended - Winter 2018"> <!-- EDIT -->
+    <meta name="twitter:description" content="Computer Perception Extended - Winter 2018"> <!-- EDIT -->
+    <meta name="twitter:image" content=" static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href=" static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href=" static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href=" static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href=" static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href=" static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href=" static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href=" static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><a href="../" title="Logo HSLU"></a></p>
+      </nav>
+    </header>
+    <main role="main">
+      <article id="webslides">
+
+        <!-- HOME -->
+        <section class="bg-black aligncenter">
+         <!-- <span class="background dark" style="background-image:url('https://miulinglam.files.wordpress.com/2010/02/cp07.jpg')"></span> -->
+          <span class="background dark" style="background-image:url('static/images/graphcore-vis-02.jpg')"></span>
+          <!--.wrap = container (width: 90%) -->
+          <div class="wrap">
+            <h1 class="text-landing">Computer Perception Extended</h1>
+            <p class="text-subtitle">WEEK 01</p>
+            <p class="text-symbols">* * * </p>
+            <p><a target="_blank" class="button ghost" href="https://digitalideation.github.io/ba_218_comppx_h1801/" ><svg class="fa-github">
+                <use xlink:href="#fa-github"></use>
+              </svg> Main repo</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="bg-gradient-v aligncenter">
+          <span class="background dark" style="background-image:url('https://images.unsplash.com/photo-1505424297051-c3ad50b055ae')"></span>
+          <div class="wrap">
+            <h1 class="text-landing">1. Intro</h1>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap size-80">
+            <h2>About this course</h2>
+            <p class="text-intro">Introduction to machine learning</p>
+            <p>The goal of the module is to explore different applications of ML/AI/DL with a focus on design and art. </p>
+            <p>We will first learn how neural networks work with simple code examples. From there we will experiment with different techniques of Deep Learning for Computer Vision (image classification, objects detection, pose estimation...) and Generative Deep Learning (DeepDream, style transfer, Pix2Pix / CycleGAN...). </p>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="card-30 bg-white">
+              <figure>
+                <img src="https://blog.massol.me/content/images/2017/03/2017-03-20-23_18_07.gif" alt="G.">
+              </figure>
+              <div class="flex-content">
+                <h2>About Me</h2>
+                <p>UX, UI, CODE</p>
+                <p>Designer and coder. Background in code, worked mostly in design...</p>
+                <ul class="description">
+                  <li><svg class="fa-external-link"><use xlink:href="#fa-external-link"></use></svg> <a target="_blank" href="https://massol.me"> Massol.me</a></li>
+                  <li><svg class="fa-github"><use xlink:href="#fa-github"></use></svg> <a target="_blank" href="https://github.com/gu-ma"> Github/gu-ma</a></li>
+                  <li><svg class="fa-linkedin"><use xlink:href="#fa-linkedin"></use></svg>  <a target="_blank" href="https://www.linkedin.com/in/gmassol/"> LinkedIn/gmassol</a></li>
+                  <li><svg class="fa-twitter"><use xlink:href="#fa-twitter"></use></svg> <a target="_blank" href="https://twitter.com/g_massol"> Twitter/g_massol/</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">Principles</h1>
+          </div>
+        </section>
+
+        <section class="bg-trans-gradient">
+          <span class="background dark" style="background-image:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f')"></span>
+          <div class="wrap size-80">
+            <p class="text-context">Peer learning</p>
+            <h2>"Peer learning is an educational practice in which students interact with other students to attain educational goals."</h2>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-90" src="static/images/growth-quote-00.jpg" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-90" src="static/images/growth-quote-01.jpg" alt="diagram">
+          </div>
+        </section>
+<!-- 
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-90" src="static/images/growth-quote-02.gif" alt="diagram">
+          </div>
+        </section>
+ -->
+
+        <!-- EVALUATION CRITERIA -->
+        <section class="frame">
+          <div class="wrap size-50">
+            <h2>
+              <svg class="fa-thumbs-o-up">
+                <use xlink:href="#fa-thumbs-o-up"></use>
+              </svg>
+              Evaluation Criteria
+            </h2>
+            <ul class="description">
+              <li><span class="text-label">Grading</span> Collaboration, Research, Exploration</li>
+              <li><span class="text-label">Deliverable</span> Presentation + project (documentation would be a plus)</li>
+              <li><span class="text-label">Date</span> Week 51 / 52</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- AI / ML / DL -->
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">AI/ML/DL</h1>
+          </div>
+        </section>
+
+        <section class="bg-gradient-v">
+          <span class="background dark" style="background-image:url('https://images.unsplash.com/photo-1511376777868-611b54f68947')"></span>
+          <div class="wrap size-80">
+            <p class="text-context">AI</p>
+            <h2>Artificial intelligence (AI) is an area of computer science that emphasizes the creation of intelligent machines that work and react like humans.</h2>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-50" src="static/images/Presentation1.009.png" alt="diagram">
+          </div>        
+        </section>
+
+        <section class="bg-gradient-v">
+          <span class="background dark" style="background-image:url('https://images.unsplash.com/photo-1483736762161-1d107f3c78e1')"></span>
+          <div class="wrap size-80">
+            <p class="text-context">ML</p>
+            <h2>Machine Learning at its most basic is the practice of using algorithms to parse data, learn from it, and then make a determination or prediction about something in the world.<br></h2>
+            <h2> -- </h2> 
+            <h2>So rather than hand-coding software routines with a specific set of instructions to accomplish a particular task, the machine is “trained” using large amounts of data and algorithms that give it the ability to learn how to perform the task.</h2>
+          </div>
+        </section>
+
+        <section class="bg-white aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-40" src="static/images/anal_engine.png" alt="diagram">            
+            <blockquote>
+              <h2>Analytical Engine</h2>
+              <p>“ The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform… Its province is to assist us in making available what we are already acquainted with ” </p>
+              <p><cite>Ada Lovelace (1843)</cite></p>
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/Presentation1.012.png" alt="diagram">
+          </div>        
+        </section>
+
+        <section class="frame bg-white aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/google_ml.png" alt="diagram">            
+            <h1 class="text-landing">Brief history of ML</h1>
+            <p></p>
+            <p>
+              <a target="_blank" class="button ghost" href="https://cloud.withgoogle.com/build/data-analytics/explore-history-machine-learning/" >
+                <svg class="fa-external-link"><use xlink:href="#fa-external-link"></use></svg> 
+                View reference
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">What is Deep Learning</h1>
+          </div>
+        </section>
+
+        <section class="bg-gradient-v">
+          <span class="background dark" style="background-image:url('https://images.unsplash.com/photo-1533756972958-d6f38a9761e3')"></span>
+          <div class="wrap size-80">
+            <p class="text-context">DL</p>
+            <h2>Deep learning is a specific subfield of machine learning, a new take on learning representations from data which puts an emphasis on learning successive "layers" of increasingly meaningful representations.</h2>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Learning representations from data</h3>
+            <img class="aligncenter size-80" src="static/images/Presentation1.017.png" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Example of other classifiers</h3>
+            <img class="aligncenter size-80" src="static/images/Presentation1.018.png" alt="diagram">
+            <p>
+              <a target="_blank" class="button ghost" href="http://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html" >
+                <svg class="fa-external-link"><use xlink:href="#fa-external-link"></use></svg> 
+                View reference
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section class="frame bg-white aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-40" src="static/images/r2d3-vis.gif" alt="diagram">            
+            <h1 class="text-landing">Visualisation of a ML classifier</h1>
+            <p></p>
+            <p>
+              <a target="_blank" class="button ghost" href="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/" >
+                <svg class="fa-external-link"><use xlink:href="#fa-external-link"></use></svg> 
+                View reference
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>The 'Deep' in Deep Learning</h3>
+            <img class="aligncenter size-80" src="static/images/Presentation1.019.png" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-80" src="static/images/Presentation1.020.png" alt="diagram">
+          </div>
+        </section>
+
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">Understanding how deep learning works in three figures</h1>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/Presentation1.022.png" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/Presentation1.023.png" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/Presentation1.024.png" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-white">
+          <div class="wrap size-90">
+            <h3>Application of DL</h3>
+            <ul class="flexblock gallery">
+              <li>
+                <figure>
+                  <img alt="Thumbnail " src="static/images/dl-example-01.jpg">
+                  <figcaption>
+                    <h2>Self driving vehicles</h2>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img alt="Thumbnail " src="static/images/dl-example-02.jpg">
+                  <figcaption>
+                    <h2>Face tracking / recognition</h2>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img alt="Thumbnail " src="static/images/dl-example-03.jpg">
+                  <figcaption>
+                    <h2>Medical image interpretation</h2>
+                  </figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <img alt="Thumbnail " src="static/images/dl-example-04.jpg">
+                  <figcaption>
+                    <h2>Speech processing</h2>
+                  </figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">Why Now?</h1>
+          </div>
+        </section>
+
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">Bird view of a NN</h1>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/Presentation1.027.png" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/Presentation1.028.png" alt="diagram">
+          </div>
+        </section>
+
+        <!-- MATHS -->
+        <section class="bg-gradient-r aligncenter">
+          <span class="background dark" style="background-image:url('static/images/math.gif')"></span>
+          <div class="wrap">
+            <h1 class="text-landing">2. Maths</h1>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <img class="aligncenter size-60" src="static/images/3blue1brown.png" alt="diagram">            
+            <h1 class="text-landing">Essence of linear algebra</h1>
+            <p></p>
+            <p>
+              <a target="_blank" class="button ghost" href="https://www.3blue1brown.com/essence-of-linear-algebra" >
+                <svg class="fa-external-link"><use xlink:href="#fa-external-link"></use></svg> 
+                View reference
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <!-- ML -->
+        <section class="bg-gradient-r aligncenter">
+          <span class="background dark" style="background-image:url('static/images/80s-pc.gif')"></span>
+          <div class="wrap">
+            <h1 class="text-landing">3. Machine Learning</h1>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Image classification</h3>
+            <img class="aligncenter size-70" src="static/images/classification-image.jpg" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Image regression</h3>
+            <img class="aligncenter size-70" src="static/images/regression-pans.jpg" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Text classification</h3>
+            <img class="aligncenter size-70" src="static/images/classification-text.jpg" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Sound classification (text to speech)</h3>
+            <img class="aligncenter size-70" src="static/images/classification-txt2speech.jpg" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Object Detection</h3>
+            <img class="aligncenter size-70" src="static/images/object-detection.jpg" alt="diagram">
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Pose Detection</h3>
+            <img class="aligncenter size-70" src="static/images/pose-detection.jpg" alt="diagram">
+          </div>
+        </section>
+        
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Image Segmentation</h3>
+            <img class="aligncenter size-70" src="static/images/image-segmentation.jpg" alt="diagram">
+          </div>
+        </section>
+        
+        <!-- Four different kinds of ML -->
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">Four different kinds of ML</h1>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Supervised Learning</h3>
+            <img class="aligncenter size-50" src="static/images/Presentation1.060.png" alt="diagram">
+            <p>Learning to map input data to known targets (also called annotations),<br> given a set of examples (often annotated by humans)</p>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Unsupervised Learning</h3>
+            <img class="aligncenter size-50" src="static/images/k_mean_send.gif" alt="diagram">
+            <p>Finding interesting transformations of the input data without the help of any targets</p>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Self Supervised Learning</h3>
+            <img class="aligncenter size-80" src="static/images/Presentation1.063.png" alt="diagram">
+            <p>Supervised learning without human-annotated labels. There are still labels involved (since the learning has to be supervised by something), but they are generated from the input data itself, typically using a heuristic algorithm</p>
+          </div>
+        </section>
+
+        <section class="bg-black aligncenter">
+          <div class="wrap">
+            <h3>Reinforcement Learning</h3>
+            <img class="aligncenter size-50" src="static/images/rl.gif" alt="diagram">
+            <p>In reinforcement learning, an "agent" receives information about its environment and learns to pick actions that will maximize some reward. </p>
+          </div>
+        </section>
+
+        <section class="frame bg-black aligncenter">
+          <div class="wrap">
+            <h1 class="text-landing">Examples</h1>
+          </div>
+        </section>
+
+        <!-- CONVNETS -->
+        <section class="bg-black fullscreen">
+          <div class="embed">
+            <video autoplay loop muted poster="static/images/example-xdegree.jpg">
+              <source src="static/images/example-xdegree.mp4" type="video/mp4">
+            </video>
+          </div>          
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>X Degrees of Separation</h2>
+                <p class="text-intro">The hidden paths through culture</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://artsexperiments.withgoogle.com/xdegrees/">https://artsexperiments.withgoogle.com/xdegrees/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://github.com/quasimondo">Mario Klingemann & Simon Doury</a>
+                  </li>
+                  <li>
+                    <span class="text-label">blog post:</span>
+                    <a target="_blank" href="https://experiments.withgoogle.com/x-degrees-of-separation">https://experiments.withgoogle.com/x-degrees-of-separation</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide-left">
+          <span class="background dark" style="background-image:url('static/images/example-movemirror.gif')"></span>
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>Move Mirror</h2>
+                <p class="text-intro">Explore pictures in a fun new way, just by moving around.</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://experiments.withgoogle.com/move-mirror">Move Mirror</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="#">Google Creative Lab</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide-left">
+          <span class="background dark" style="background-image:url('static/images/example-teachmachine.gif')"></span>
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>Teachable Machine</h2>
+                <p class="text-intro">Teach a machine using your camera, live in the browser - no coding required.</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://experiments.withgoogle.com/teachable-machine">Teachable Machine</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="#">Google Creative Lab</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- GAN -->
+        <section class="slide-left">
+          <span class="background dark" style="background-image:url('static/images/example-doodle.gif')"></span>
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>Neural Doodle</h2>
+                <p class="text-intro">Use a deep neural network to borrow the skills of real artists and turn your two-bit doodles into masterpieces!</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://github.com/alexjc/neural-doodle">https://github.com/alexjc/neural-doodle</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://github.com/alexjc">https://github.com/alexjc</a>
+                  </li>
+                  <li>
+                    <span class="text-label">based on:</span>
+                    <a target="_blank" href="http://arxiv.org/abs/1603.01768">Semantic Style Transfer</a>
+                  </li>
+                  <li>
+                    <span class="text-label">blog post:</span>
+                    <a target="_blank" href="https://nucl.ai/blog/neural-doodles/">https://nucl.ai/blog/neural-doodles/</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <figure>
+                  <img src="static/images/examples-t2i.jpg" alt="Text 2 Image">
+                </figure>
+              </div>
+              <div class="column">
+                <h2>Text 2 Image</h2>
+                <p class="text-intro">Text 2 Image translation</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="http://t2i.cvalenzuelab.com">t2i.cvalenzuelab.com</a>
+                  </li>
+                  <li>
+                    <span class="text-label">based on:</span>
+                    <a target="_blank" href="https://github.com/taoxugit/AttnGAN/">AttnGan</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://twitter.com/c_valenzuelab">@c_valenzuelab</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <figure>
+                  <img src="static/images/example-fastphotostyle.jpg" alt="fpt">
+                </figure>
+              </div>
+              <div class="column">
+                <h2>Fast photo style</h2>
+                <p class="text-intro">Given a content photo and a style photo, the code can transfer the style of the style photo to the content photo.</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://github.com/nvidia/fastphotostyle">https://github.com/nvidia/fastphotostyle</a>
+                  </li>
+                  <li>
+                    <span class="text-label">tutorial:</span>
+                    <a target="_blank" href="https://github.com/NVIDIA/FastPhotoStyle/blob/master/TUTORIAL.md">https://github.com/NVIDIA/FastPhotoStyle/blob/master/TUTORIAL.md</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://github.com/NVIDIA">https://github.com/NVIDIA</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <figure>
+                  <img src="static/images/example-everybodydance.jpg" alt="Text 2 Image">
+                </figure>
+              </div>
+              <div class="column">
+                <h2>Everybody Dance Now</h2>
+                <p class="text-intro">Simple method for "do as I do" motion transfer: given a source video of a person dancing the model can transfer that performance to a novel (amateur) target after only a few minutes of the target subject performing standard moves</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://carolineec.github.io/everybody_dance_now/">https://carolineec.github.io/everybody_dance_now/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">how to:</span>
+                    <a target="_blank" href="https://www.youtube.com/watch?v=WzRonX_bs34/">https://www.youtube.com/watch?v=WzRonX_bs34/</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+<!-- 
+        <section class="bg-black fullscreen">
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+              <h2>Everybody Dance Now</h2>
+              <p class="text-intro">Simple method for "do as I do" motion transfer: given a source video of a person dancing the model can transfer that performance to a novel (amateur) target after only a few minutes of the target subject performing standard moves</p>
+              <ul class="description">
+                <li>
+                  <span class="text-label">url:</span>
+                  <a target="_blank" href="https://carolineec.github.io/everybody_dance_now/">https://carolineec.github.io/everybody_dance_now/</a>
+                </li>
+                <li>
+                  <span class="text-label">how to:</span>
+                  <a target="_blank" href="https://www.youtube.com/watch?v=WzRonX_bs34/">https://www.youtube.com/watch?v=WzRonX_bs34/</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="embed">
+            <iframe id="myVideo" src="https://www.youtube.com/embed/PCBTZh41Ris?rel=0&autoplay=1&mute=1" allowfullscreen></iframe>
+          </div>
+        </section>
+ -->
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <figure>
+                  <img src="static/images/example-vid2vid-face2face.gif" alt="vid2vid">
+                </figure>
+              </div>
+              <div class="column">
+                <h2>vid2vid</h2>
+                <p class="text-intro">photorealistic video-to-video translation. It can be used for turning semantic label maps into photo-realistic videos, synthesizing people talking from edge maps, or generating human motions from poses.</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://github.com/NVIDIA/vid2vid">https://github.com/NVIDIA/vid2vid</a>
+                  </li>
+                  <li>
+                    <span class="text-label">project:</span>
+                    <a target="_blank" href="https://tcwang0509.github.io/vid2vid/">https://tcwang0509.github.io/vid2vid/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://github.com/NVIDIA">https://github.com/NVIDIA</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TEXT (RNN, LSTM, GRU) -->
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <figure>
+                  <img src="static/images/example-sentencespace.png" alt="example-sentencespace">
+                </figure>
+              </div>
+              <div class="column">
+                <h2>Voyage in Sentence Space</h2>
+                <p class="text-intro">Imagine a sentence. “I went looking for adventure.” Imagine another one. “I never returned.” Now imagine a sentence gradient between them</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://www.robinsloan.com/voyages-in-sentence-space/">https://www.robinsloan.com/voyages-in-sentence-space/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://www.robinsloan.com/">Robin Sloan</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <figure>
+                  <img src="static/images/example-machinewriting.gif" alt="machinewriting">
+                </figure>
+              </div>
+              <div class="column">
+                <h2>Writing with the machine</h2>
+                <p class="text-intro">...If I had to offer an extravagant analogy (and I do) I’d say it’s like writing with a deranged but very well-read parrot on your shoulder. Anytime you feel brave enough to ask for a suggestion, you press tab, and...</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://www.robinsloan.com/notes/writing-with-the-machine/">https://www.robinsloan.com/notes/writing-with-the-machine/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://www.robinsloan.com/">Robin Sloan</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-gradient-v">
+          <span class="background dark" style="background-image:url('https://images.unsplash.com/photo-1534250181471-a453fae2231d')"></span>
+          <div class="wrap size-80">
+            <blockquote>
+              <p>I should say clearly: I am absolutely 100% not talking about an editor that “writes for you,” whatever that means. The world doesn’t need any more dead-eyed robo-text.</p>
+              <p>The animating ideas here are augmentation; partnership; call and response.</p>
+              <p>The goal is not to make writing “easier”; it’s to make it harder.</p>
+              <p>The goal is not to make the resulting text “better”; it’s to make it different — weirder, with effects maybe not available by other means.</p>
+              <p><cite>Robin Sloan</cite></p>
+            </blockquote>
+          </div>
+        </section>
+
+        <!-- RL -->
+        <section class="slide-left">
+          <span class="background dark" style="background-image:url('static/images/example-dinorun.gif')"></span>
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>Dino Run</h2>
+                <p class="text-intro">Build an AI to play Dino Run / A tutorial to build a Reinforcement Learning model</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://blog.paperspace.com/dino-run/">https://blog.paperspace.com/dino-run/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://blog.paperspace.com/author/ravi/">Ravi Munde</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-black fullscreen">
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>OpenAI Five</h2>
+                <p class="text-intro">OpenAI team of five neural networks, OpenAI Five, has started to defeat amateur human teams at Dota 2.</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://blog.openai.com/openai-five/">https://blog.openai.com/openai-five/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://openai.com/">OpenAI</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <div class="embed">
+            <iframe id="myVideo" src="https://www.youtube.com/embed/eHipy_j29Xw?rel=0&autoplay=1&mute=1&iv_load_policy=3" allowfullscreen></iframe>
+          </div>          
+        </section>
+
+        <!-- AUDIO -->
+        <section class="bg-black fullscreen">
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>BeatBox</h2>
+                <p class="text-intro">AI Can Help Anyone Become a Beatbox Champion</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://codepen.io/naotokui/pen/NBzJMW">https://codepen.io/naotokui/pen/NBzJMW</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://twitter.com/naotokui">@naotokui</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <div class="embed">
+            <iframe id="myVideo" src="https://www.youtube.com/embed/_QUinTO2n2M?rel=0&autoplay=1&mute=1&iv_load_policy=3" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <section class="bg-black fullscreen">
+          <div class="wrap">
+            <div class="content-left">
+                <h2>Imaginary Soundscape</h2>
+                <p class="text-intro">Take a walk in soundscapes "imagined" by AI</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="http://naotokui.net/projects/imaginary-soundscape/">http://naotokui.net/projects/imaginary-soundscape/</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://twitter.com/naotokui">@naotokui</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+          <div class="embed">
+            <iframe id="myVideo" src="https://www.youtube.com/embed/uU-sZq2JOY4?rel=0&autoplay=1&mute=1&iv_load_policy=3" allowfullscreen></iframe>
+          </div>
+        </section>
+
+        <section class="bg-black fullscreen">
+          <span class="background light" style="background-image:url('static/images/example-aidj.png')"></span>
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>AI DJ PROJECT</h2>
+                <p class="text-intro">A dialog between human and AI through music</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="http://aidj.qosmo.jp">http://aidj.qosmo.jp</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://twitter.com/naotokui">@naotokui</a>
+                  </li>
+                  <li>
+                    <span class="text-label">blog post:</span>
+                    <a target="_blank" href="https://medium.com/@naotokui/ai-dj-project-a-dialog-between-human-and-ai-through-music-abca9fd4a45d">Medium article</a>
+                  </li>
+
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-black fullscreen">
+          <span class="background light" style="background-image:url('static/images/example-neural-drum.jpg')"></span>
+          <div class="wrap">
+            <div class="content-left bg-trans-dark">
+                <h2>The Neural Drum Machine</h2>
+                <p class="text-intro">Uses the "Drums RNN" model from @TensorFlow Magenta to generate drum patterns. And @deeplearnjs + Tone.</p>
+                <ul class="description">
+                  <li>
+                    <span class="text-label">url:</span>
+                    <a target="_blank" href="https://codepen.io/teropa/pen/JLjXGK">https://codepen.io/teropa/pen/JLjXGK</a>
+                  </li>
+                  <li>
+                    <span class="text-label">built by:</span>
+                    <a target="_blank" href="https://twitter.com/teropa">@teropa</a>
+                  </li>
+                  <li>
+                    <span class="text-label">post:</span>
+                    <a target="_blank" href="https://twitter.com/teropa/status/971789511339511809">https://twitter.com/teropa/status/971789511339511809</a>
+                  </li>
+
+                </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- CREDITS -->
+        <section class="frame">
+          <div class="wrap size-50">
+            <h2>
+              <svg class="fa-thumbs-o-up">
+                <use xlink:href="#fa-thumbs-o-up"></use>
+              </svg>
+              Credits
+            </h2>
+            <ul class="description">
+              <li><span class="text-label">Photos</span> <a href="http://www.unsplash.com">unsplash.com</a> </li>
+              <li><span class="text-label">Diagrams</span> mostly <a href="https://www.manning.com/books/deep-learning-with-python" target="_blank">Deep Learning With Python</a> by François Chollet</li>
+            </ul>
+          </div>
+        </section>
+
+      </article>
+    </main>
+    <!--main-->
+
+    <!-- Required -->
+    <script src=" static/js/webslides.js"></script>
+
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src=" static/js/svg-icons.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,249 @@
+AI - QUOTE 01
+------
+Concise definition: the effort to automate intellectual tasks normally performed by humans. 
+
+born in the 1950s, pioneers from the nascent field of computer science started asking if computers could be made to "think" — a question whose ramifications we are still exploring today.
+ 
+Ai is a very general field which encompasses machine learning and deep learning, but also includes many more approaches that do not involve any learning. 
+
+
+------
+AI - DIAGRAM
+------
+For a fairly long time many experts believed that human-level artificial intelligence could be achieved simply by having programmers handcraft a sufficiently large set of explicit rules for manipulating knowledge. This approach is known as "symbolic AI”.
+
+Early chess programs: hard-coded rules crafted by programmers, and did not qualify as "machine learning”. And it was the dominant way of doing AI from the 1950s to the late 1980s.
+
+symbolic AI: suitable to solve well-defined, logical problems, such as playing chess, it turned out to be intractable to figure out explicit rules for solving more complex, fuzzy problems, such as image classification, speech recognition, or language translation. A new approach to AI arose to take its place: machine learning.
+
+
+------
+ANAL. ENGINE
+------
+18th Century, Lady Ada Lovelace was a friend and collaborator of Charles Babbage, the inventor of the "Analytical Engine” (1830s and 1840s) the first known design of a general-purpose computer — a mechanical computer.
+
+Visionary but not meant as a general-purpose computer since the concept of general-purpose computation was yet to be invented. It was meant as a way to use mechanical operations to automate certain computations from the field of mathematical analysis — hence the name "analytical engine". 
+
+In 1843, Ada Lovelace remarked on the invention:
+
+This remark was quoted by AI pioneer Alan Turing as "Lady Lovelace’s objection" in his landmark 1950 paper "Computing Machinery and Intelligence", which introduced the "Turing test" as well as key concepts that would come to shape AI. 
+
+Turing was quoting Ada Lovelace while pondering whether general-purpose computers could be capable of learning and originality, and he came to the conclusion that they could.
+
+
+------
+CLASSIC vs ML
+------
+Machine learning arises from this very question: could a computer go beyond "what we know how to order it to perform”
+
+Rather than crafting data-processing rules by hand, could it be possible to automatically learn these rules by looking at data?
+
+This question opens up the door to a new programming style. 
+
+Classical programming (symbolic AI) humans would input rules (a program), data to be processed according to these rules, and out would come answers. 
+
+With machine learning, humans would input data as well as the answers expected from the data, and out would come the rules. These rules could then be applied to new data to produce original answers.
+
+A machine learning system is "trained" rather than explicitly programmed. 
+
+It is presented with many "examples" relevant to a task, and it finds statistical structure in these examples which eventually allows the system to come up with rules for automating the task.
+
+
+------
+DL - QUOTE 01
+------
+To define deep learning, and understand the difference between deep learning and other machine learning approaches, first we need to get some idea of what machine learning algorithms really do. 
+
+We just stated that machine learning discovers rules to execute a data-processing task, given examples of what is expected.
+
+. Input data points. If speech recognition, these data points could be sound files of people speaking. If the task is image tagging, they could be picture files.
+. Examples of the expected output. In a speech recognition task, these could be human-generated transcripts of our sound files. In an image task, expected outputs could tags such as "dog", "cat", and so on.
+. A way to measure if the algorithm is doing a good job, to measure the distance between its current output and its expected output. This is used as a feedback signal to adjust the way the algorithm works. This adjustment step is what we call "learning".
+
+
+Machine learning model transforms input data into a meaningful output, a process which is "learned" from exposure to known examples of inputs and outputs. Therefore, the central problem in machine learning and deep learning is to meaningfully transform data, or in other words, to learn useful "representations" of the input data at hand, representations that get us closer to the expected output. 
+
+What’s a representation? 
+
+At its core, it’s a different way to look at your data — to "represent", or "encode" your data. For instance, a color image can be encoded in the RGB format ("red-green-blue") or in the HSV format ("hue-saturation-value"): these are two different representations of the same data. 
+
+Some tasks that may be difficult with one representation can become easy with another. For example, the task "select all red pixels in the image" is simpler in the RBG format, while "make the image less saturated" is simpler in the HSV format. Machine learning models are all about finding appropriate representations for their input data, transformations of the data that make it more amenable to the task at hand, such as a classification task.
+
+
+------
+DL - DIAGRAM 01
+------
+Let’s make this concrete. Let’s consider an x axis, and y axis, and some points represented by their coordinates in the (x, y) system: our data,
+
+As you can see we have a few white points and a few black points. Let’s say we want to develop an algorithm that could take the coordinates (x, y) of a point, and output whether the point considered is likely to be black or to be white. In this case:
+
+. The inputs are the coordinates of our points.
+. The expected outputs are the colors of our points.
+. A way to measure if our algorithm is doing a good job could be, for instance, the percentage of points that are being correctly classified.
+
+What we need here is a new representation of our data that cleanly separates the white points from the black points. One transformation we could use, among many other possibilities, would be a coordinate change
+
+It’s a good one! With this representation, the black/white classification problem can be expressed as a simple rule: black points are such that x → 0 or "white points are such that x < 0". Our new representation basically solves the classification problem.
+
+In this case, we defined our coordinate change by hand. But if instead we tried systematically searching for different possible coordinate changes, and used as feedback the percentage of points being correctly classified, then we would be doing machine learning. 
+
+“Learning", in the context of machine learning, describes an automatic search process for better representations.
+
+
+------
+DL - DIAGRAM 02
+------
+All machine learning algorithms consist of automatically finding such transformations that turn data into more useful representations for a given task. These operations could sometimes be coordinate changes, as we just saw, or could be linear projections (which may destroy information), translations, non-linear operations (such as select all points such that x → 0), etc. Machine learning algorithms are not usually very creative in finding these transformations, they are merely searching through a predefined set of operations, called an "hypothesis space".
+
+So that’s what machine learning is, technically: searching for useful representations of some input data, within a pre-defined space of possibilities, using guidance from some feedback signal. This simple idea allows for solving a remarkably broad range of intellectual tasks, from speech recognition to autonomous car driving.
+
+
+------
+DL - DEEP in DL
+------
+The "deep" in "deep learning" is not a reference to any kind of "deeper" understanding achieved by the approach, rather, it simply stands for this idea of successive layers of representations — how many layers contribute to a model of the data is called the "depth" of the model. 
+
+Modern deep learning often involves tens or even hundreds of successive layers of representation — and they are all learned automatically from exposure to training data. Meanwhile, other approaches to machine learning tend to focus on learning only one or two layers of representation of the data. Hence they are sometimes called "shallow learning".
+
+In deep learning, these layered representations are (almost always) learned via models called "neural networks", structured in literal layers stacked one after the other.
+
+The term "neural network" is a reference to neurobiology, but although some of the central concepts in deep learning were developed in part by drawing inspiration from our understanding of the brain, deep learning models are not models of the brain. There is no evidence that the brain implements anything like the learning mechanisms in use in modern deep learning models. 
+
+One might sometimes come across pop-science articles proclaiming that deep learning works "like the brain", or was "modeled after the brain", but that is simply not the case. In fact, it would be confusing and counter-productive for new-comers to the field to think of deep learning as being in any way related to the neurobiology. You don’t need that shroud of "just like our minds" mystique and mystery. So you might as well forget anything you may have read so far about hypothetical links between deep learning and biology. 
+
+For our purposes, deep learning is merely a mathematical framework for learning representations from data.
+
+
+------
+DL - DIAGRAM 03...
+------
+A 3-layer deep network transforms an image of a digit in order to recognize what digit it is:
+
+As you can see, the network transforms the digit image into representations that are increasingly different from the original image, and increasingly informative about the final result. You can think of a deep network as a multi-stage information distillation operation, where information goes through successive filters and comes out increasingly "purified" (i.e. useful with regard to some task).
+
+So that is what deep learning is, technically: a multi-stage way to learn data representations. A simple idea — but as it turns out, very simple mechanisms, sufficiently scaled, can end up looking like magic.
+
+
+------
+DL - How in 3 - 01
+------
+The specification of what a layer does to its input data is stored in the layer’s "weights", which in essence are a bunch of numbers.
+
+Weights are also sometimes called the "parameters" of a layer. In this context, "learning" will mean finding a set of values for the weights of all layers in a network, such that the network will correctly map your example inputs to their associated targets. 
+
+But here’s the thing: a deep neural network can contain tens of millions of parameters. Finding the correct value for all of them may seem like a daunting task, especially since modifying the value of one parameter will affect the behavior of all others!
+
+
+------
+DL - How in 3 - 02
+------
+To control something, first, you need to be able to observe it. To control the output of a neural network, you need to be able to measure how far this output is from what you expected. 
+
+The loss function capture how well the network has done on this specific example.
+
+
+------
+DL - How in 3 - 03
+------
+The fundamental trick in deep learning is to use this score as a feedback signal to adjust the value of the weights by a little bit, in a direction that would lower the loss score for the current example. 
+
+This adjustment is the job of the "optimizer", which implements what is called the "backpropagation" algorithm, the central algorithm in deep learning.
+
+
+------
+DL - Why now
+------
+. HARDWARE
+	. CPU got faster, 
+	. switch to GPU in the 2000’s. Matrix multiplications, are highly parallelizable, and around 2011, some researchers started writing CUDA implementation of NN) 
+	. Beyond GPU company like google are now developing their own hardware, Google revealed its "TPU" project (tensor processing unit), a new chip design developed from the ground-up to run deep neural networks, reportedly 10x faster and far more energy-efficient than top-of-line GPUs. Also (Graphcore: https://www.graphcore.ai/ cover image) 
+
+. DATA
+	. Data collection. AI is sometimes heralded as the new industrial revolution. If deep learning is the steam engine of this revolution, then data is its coal.
+	. Datasets: one dataset that has been a catalyst for the rise of deep learning, it is the ImageNet dataset, consisting in 1.4 million images hand-annotated with 1000 images categories (one category per image). But what makes ImageNet special is not just its large size, but also the yearly competition associated with it. As Kaggle.com as been demonstrating since 2010, public competitions are an excellent way to motivate researchers and engineers to push the envelope. Having common benchmarks that researchers compete to beat has greatly helped the recent rise of deep learning.
+
+. ALGO
+Better algo for gradient propagation Vanishing gradient problem
+
+. INVESTMENTS
+In 2011, right before deep learning started taking the spotlight, the total venture capital investment in AI was around $19M, going almost entirely to practical applications of shallow machine learning approaches. By 2014, $394M. Deepmind bought for: $500M
+
+. DEMOCRATIZATION
+Opensource plus good warper for software. Tensorflow, Theano, Keras, Torch
+
+
+------
+Four different kinds of ML - 01 - Supervised
+------
+This is by far the most common case. It consists of learning to map input data to known targets (also called annotations), given a set of examples (often annotated by humans). 
+
+Generally, almost all applications of deep learning that are getting the spotlight these days belong in this category, such as optical character recognition, speech recognition, image classification or language translation.
+
+Although supervised learning mostly consists of classification and regression, there are more exotic variants:
+
+. Sequence generation (e.g. given a picture, predict a caption describing it). Sequence generation can sometimes be reformulated as a series of classification problems (e.g. repeatedly predicting the word or token in a sequence).
+
+. Object detection: given a picture, draw a bounding box around certain objects inside the picture. This can also be expressed as a classification problem (given many candidate bounding boxes, classify the contents of each one) or as a joint classification and regression problem, where the bounding box coordinates are being predicted via vector regression.
+
+. Image segmentation: given a picture, draw a pixel-level mask on a specific object.
+etc…
+
+
+------
+Four different kinds of ML - 02 - Unsupervised
+------
+This one consists of finding interesting transformations of the input data without the help of any targets, for the purposes of data visualization, data compression, data denoising… or simply to better understand the correlations present in the data at hand. 
+
+Unsupervised learning is the bread and butter of "data analytics", and is often a necessary step in better understanding a dataset before attempting to solve a supervised learning problem. "Dimensionality reduction" and "clustering" are well-known categories of unsupervised learning.
+
+
+------
+Four different kinds of ML - 03 - Self Supervised
+------
+This is actually a specific instance of supervised learning, but it different enough that it deserves its own category. 
+
+You can think of it as supervised learning without any humans in the loop. For instance, "autoencoders" are a well-known instance of self-supervised learning, where the generated targets are… the input themselves, unmodified. 
+
+In the same way, trying to predict the next frame in a video given past frames, or the next word in a text given previous words, would be another instance of self-supervised learning (temporally supervised learning, in this case: supervision comes from future input data). 
+
+Note that the distinction between supervised, self-supervised and unsupervised learning can be blurry sometimes — these categories are more of continuum without solid frontiers. 
+
+
+------
+Four different kinds of ML - 04 - RL
+------
+Long overlooked, this branch of machine learning has recently started getting a lot of attention, after Google DeepMind successfully applied it to learning to play Atari games (and later, to learning to play Go at the highest level). 
+
+In reinforcement learning, an "agent" receives information about its environment and learns to pick actions that will maximize some reward. 
+
+For instance, a neural network that "looks" at a video game screen and outputs game actions in order to maximize its score can be trained via reinforcement learning. 
+
+Currently, reinforcement learning is mostly a research area and has not yet had significant practical successes beyond games. In time, however, I would expect to see reinforcement learning take over an increasingly large range of real-world applications — self-driving, robotics, resource management, education… It is an idea whose time has come, or will come soon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+STATUS QUO
+------
+How did it go? 'What questions do you have?' 
+
+
+------
+Intro
+------
+A major characteristic of all neural networks that you have seen so far, such as densely-connected networks and convnets, is that they had no memory. Each input shown to them gets processed independently, with no state kept in between inputs. With such networks, in order to process a sequence or a temporal series of data points, you have to show the entire sequence to the network at once, i.e. turn it into a single datapoint. Such networks are called "feedforward networks”
+
+But we read word by word
+
+RNNs are a type of neural network that has an internal loop
+
+
+------
+What letter is going to come next?
+------
+first few words of Ernest Hemingway’s The Sun Also Rises as an example:
+
+You probably guessed ’n’ — the word is probably going to be boxing. We know this based on the letters we’ve already seen in the sentence and our knowledge of common words in English. Also, the word ‘middleweight’ gives us an extra clue that we are talking about boxing.
+
+In other words, it’s easy to guess the next letter if we take into account the sequence of letters that came right before it and combine that with our knowledge of the rules of English.
+
+
+------
+word vectors
+------
+Word embeddings are meant to map human language into a geometric space. 
+(words meaning very different things would be embedded to points far away from each other, while related words would be closer)
+
+Even beyond mere distance, we may want specific directions in the embedding space to be meaningful. To make this clearer, let’s look at a concrete example.
+
+If we embedded four words on a 2D plane, "cat", "dog", "wolf" and "tiger". With the vector representations we chose here, some semantic relationships between these words can be encoded as geometric transformations. For instance, a same vector allows to go from "cat" to "tiger" and from "dog" to "wolf": this vector could be interpreted as the "from pet to wild animal" vector. Similarly, another vector allows to go from "dog" to "cat" and from "wolf" to "tiger", which could be interpreted as a "from canine to feline" vector.
+
+“the perfect word embedding space for an English-language movie review sentiment analysis model may look very different from the perfect embedding space for an English-language legal document classification model, because the importance of certain semantic relationships varies from task to task.”
+
+--> “geometric transformations are "gender vectors" and "plural vector” <--
+
+
+------
+RNN Diagram
+------
+A major characteristic of all neural networks that you have seen so far, such as densely-connected networks and convnets, is that they had no memory. Each input shown to them gets processed independently, with no state kept in between inputs. With such networks, in order to process a sequence or a temporal series of data points, you have to show the entire sequence to the network at once, i.e. turn it into a single datapoint. For instance, this is what we have been doing in our IMDB example: an entire movie review would get transformed into a single large vector, and would be processed in one go. Such networks are called "feedforward networks".
+
+RNNs are a type of neural network that has an internal loop
+
+a RNN is just a for loop that reuses quantities computed during the previous iteration of the loop. Nothing more. Of course, there are many different RNNs fitting this definition that one could build — the example we just showed is one of the simplest RNN formulations out there. RNNs are characterized by their "step function".
+
+
+------
+LSTM Diagram
+------
+SimpleRNN has a major issue: albeit it should theoretically be able to retain at time t information about inputs seen many timesteps before, in practice such long-term dependencies prove to be impossible to learn. This is due to the "vanishing gradient problem", an effect that is similar to what can be observed with non-recurrent networks (feedforward networks) that are many layers deep: as one keeps adding layers to a network, the network eventually becomes un-trainable. The theoretical reasons for this effect have been studied by Hochreiter, Schmidhuber, and Bengio in the early 1990s. The LSTM and GRU layers are designed to solve this very problem.
+
+In summary: you don’t need to understand anything about the specific architecture of a LSTM cell; as a human, it shouldn’t be your job to understand it. Just keep in mind what the LSTM cell is meant to do: allowing past information to be reinjected at a later time, thus fighting the vanishing gradient problem.
