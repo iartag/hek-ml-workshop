@@ -50,6 +50,56 @@ It is presented with many "examples" relevant to a task, and it finds statistica
 
 
 ------
+Four different kinds of ML - 01 - Supervised
+------
+This is by far the most common case. It consists of learning to map input data to known targets (also called annotations), given a set of examples (often annotated by humans). 
+
+Generally, almost all applications of deep learning that are getting the spotlight these days belong in this category, such as optical character recognition, speech recognition, image classification or language translation.
+
+Although supervised learning mostly consists of classification and regression, there are more exotic variants:
+
+. Sequence generation (e.g. given a picture, predict a caption describing it). Sequence generation can sometimes be reformulated as a series of classification problems (e.g. repeatedly predicting the word or token in a sequence).
+
+. Object detection: given a picture, draw a bounding box around certain objects inside the picture. This can also be expressed as a classification problem (given many candidate bounding boxes, classify the contents of each one) or as a joint classification and regression problem, where the bounding box coordinates are being predicted via vector regression.
+
+. Image segmentation: given a picture, draw a pixel-level mask on a specific object.
+etc…
+
+
+------
+Four different kinds of ML - 02 - Unsupervised
+------
+This one consists of finding interesting transformations of the input data without the help of any targets, for the purposes of data visualization, data compression, data denoising… or simply to better understand the correlations present in the data at hand. 
+
+Unsupervised learning is the bread and butter of "data analytics", and is often a necessary step in better understanding a dataset before attempting to solve a supervised learning problem. "Dimensionality reduction" and "clustering" are well-known categories of unsupervised learning.
+
+
+------
+Four different kinds of ML - 03 - Self Supervised
+------
+This is actually a specific instance of supervised learning, but it different enough that it deserves its own category. 
+
+You can think of it as supervised learning without any humans in the loop. For instance, "autoencoders" are a well-known instance of self-supervised learning, where the generated targets are… the input themselves, unmodified. 
+
+In the same way, trying to predict the next frame in a video given past frames, or the next word in a text given previous words, would be another instance of self-supervised learning (temporally supervised learning, in this case: supervision comes from future input data). 
+
+Note that the distinction between supervised, self-supervised and unsupervised learning can be blurry sometimes — these categories are more of continuum without solid frontiers. 
+
+
+------
+Four different kinds of ML - 04 - RL
+------
+Long overlooked, this branch of machine learning has recently started getting a lot of attention, after Google DeepMind successfully applied it to learning to play Atari games (and later, to learning to play Go at the highest level). 
+
+In reinforcement learning, an "agent" receives information about its environment and learns to pick actions that will maximize some reward. 
+
+For instance, a neural network that "looks" at a video game screen and outputs game actions in order to maximize its score can be trained via reinforcement learning. 
+
+Currently, reinforcement learning is mostly a research area and has not yet had significant practical successes beyond games. In time, however, I would expect to see reinforcement learning take over an increasingly large range of real-world applications — self-driving, robotics, resource management, education… It is an idea whose time has come, or will come soon.
+
+
+
+------
 DL - QUOTE 01
 ------
 To define deep learning, and understand the difference between deep learning and other machine learning approaches, first we need to get some idea of what machine learning algorithms really do. 
@@ -170,80 +220,6 @@ In 2011, right before deep learning started taking the spotlight, the total vent
 
 . DEMOCRATIZATION
 Opensource plus good warper for software. Tensorflow, Theano, Keras, Torch
-
-
-------
-Four different kinds of ML - 01 - Supervised
-------
-This is by far the most common case. It consists of learning to map input data to known targets (also called annotations), given a set of examples (often annotated by humans). 
-
-Generally, almost all applications of deep learning that are getting the spotlight these days belong in this category, such as optical character recognition, speech recognition, image classification or language translation.
-
-Although supervised learning mostly consists of classification and regression, there are more exotic variants:
-
-. Sequence generation (e.g. given a picture, predict a caption describing it). Sequence generation can sometimes be reformulated as a series of classification problems (e.g. repeatedly predicting the word or token in a sequence).
-
-. Object detection: given a picture, draw a bounding box around certain objects inside the picture. This can also be expressed as a classification problem (given many candidate bounding boxes, classify the contents of each one) or as a joint classification and regression problem, where the bounding box coordinates are being predicted via vector regression.
-
-. Image segmentation: given a picture, draw a pixel-level mask on a specific object.
-etc…
-
-
-------
-Four different kinds of ML - 02 - Unsupervised
-------
-This one consists of finding interesting transformations of the input data without the help of any targets, for the purposes of data visualization, data compression, data denoising… or simply to better understand the correlations present in the data at hand. 
-
-Unsupervised learning is the bread and butter of "data analytics", and is often a necessary step in better understanding a dataset before attempting to solve a supervised learning problem. "Dimensionality reduction" and "clustering" are well-known categories of unsupervised learning.
-
-
-------
-Four different kinds of ML - 03 - Self Supervised
-------
-This is actually a specific instance of supervised learning, but it different enough that it deserves its own category. 
-
-You can think of it as supervised learning without any humans in the loop. For instance, "autoencoders" are a well-known instance of self-supervised learning, where the generated targets are… the input themselves, unmodified. 
-
-In the same way, trying to predict the next frame in a video given past frames, or the next word in a text given previous words, would be another instance of self-supervised learning (temporally supervised learning, in this case: supervision comes from future input data). 
-
-Note that the distinction between supervised, self-supervised and unsupervised learning can be blurry sometimes — these categories are more of continuum without solid frontiers. 
-
-
-------
-Four different kinds of ML - 04 - RL
-------
-Long overlooked, this branch of machine learning has recently started getting a lot of attention, after Google DeepMind successfully applied it to learning to play Atari games (and later, to learning to play Go at the highest level). 
-
-In reinforcement learning, an "agent" receives information about its environment and learns to pick actions that will maximize some reward. 
-
-For instance, a neural network that "looks" at a video game screen and outputs game actions in order to maximize its score can be trained via reinforcement learning. 
-
-Currently, reinforcement learning is mostly a research area and has not yet had significant practical successes beyond games. In time, however, I would expect to see reinforcement learning take over an increasingly large range of real-world applications — self-driving, robotics, resource management, education… It is an idea whose time has come, or will come soon.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
