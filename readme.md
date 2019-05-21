@@ -8,6 +8,10 @@
 
 Main repository for the internal AI session @iart and the public H3K ML workshop.
 
+All the info regarding the workshop as well as direct links to learning materials (slides, notebooks, examples, etc... ) are accessible via the github pages for this repository:
+
+https://iartag.github.io/hek-ml-workshop/
+
 
 ## Content
 
