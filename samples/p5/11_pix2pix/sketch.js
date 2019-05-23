@@ -1,11 +1,8 @@
-// New
-// - Introduce GUI
-// - Introduce key functions
-
 // Variables
 let pix2pixImage
 let colors = ['#0000FF', '#004DFF', '#00A8FF', '#00FFFF', '#A7FF46', '#FF5400', '#FF0000', '#FFFF00', '#AC0000']
 let x, y, w, h
+
 function setup() {
     canvas = createCanvas(windowWidth, windowHeight)
     background('#0000AD')
