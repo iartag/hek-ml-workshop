@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example</title>
+    </head>
+
+    <style>
+    body {
+        background: black;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .p5Canvas {
+        margin: auto;
+    }
+    #liveStream {
+        visibility: hidden;
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    </style>
+
+    <body>
+        <!-- Libs -->
+        <script src="../js/socket.io.js"></script>
+        <script src="../js/p5.min.js"></script>
+        <script src="../js/p5.dom.min.js"></script>
+        <!-- Tools -->
+        <script src="../js/RunwayModel.js"></script>
+        <script src="../js/utils.js"></script>
+        <!-- Sources -->
+        <script src="models.js"></script>
+        <script src="sketch.js"></script>
+    </body>
+
+</html>

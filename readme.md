@@ -64,7 +64,7 @@ If you don’t have a code editor installed please install one. Some suggestions
 
 ### Web server
 We need a simple web server to run the experiments locally. Some suggestions 
-- If you have node.js/npm installed you can use _live-server_: `npm install -g live-server`, 
+- If you have node.js/npm installed you can use _live-server_: `npm install -g live-server`
 - [Other recommended options](https://github.com/processing/p5.js/wiki/Local-server)
 
 
