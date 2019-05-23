@@ -14,8 +14,8 @@ Main repository for the internal AI session @iart and the public H3K ML workshop
 
 ## Content
 
-1. [Slides for the internal presentation at iart](./slides/presentation01.html)
-2. [Slides for the ML workshop](./slides/presentation02.html)
+1. [Slides for the ML workshop](./slides/presentation02.html)
+2. [~~Slides for the internal presentation at iart~~](./slides/presentation01.html)
 
 
 ## Schedule
@@ -39,7 +39,7 @@ We are using [__Runway__](https://runwayapp.ai), a tool which makes deploying ML
 
 
 ### Docker
-[__Docker__](https://www.docker.com/) is needed in order to deploy some of the models locally. This will give us some flexibility when running experiments locally. It will also allow us to _chain_ models (at the moment a user can only run one model instance using the provided cloud GPU in Runway). A guide to getting started is [available](https://docs.runwayml.com/#/getting-started/installation?id=download-docker) for linux user those [post install steps](https://docs.docker.com/install/linux/linux-postinstall/) could be useful as well
+[__Docker__](https://www.docker.com/) is needed in order to deploy some of the models locally. This will give us some flexibility when running experiments locally. It will also allow us to _chain_ models (at the moment a user can only run one model instance using the provided cloud GPU in Runway). A guide to getting started is [available](https://docs.runwayml.com/#/getting-started/installation?id=download-docker). For linux users, those [post install steps](https://docs.docker.com/install/linux/linux-postinstall/) could be useful as well.
 
 > Docker for Windows requires Microsoft Hyper-V, which is supported only in the Pro, Enterprise or Education editions of Windows. If you don't have a Pro, Enterprise or Education Windows edition you will not be able to install Docker and you will be able to only run some models using cloud GPU.
 
@@ -55,7 +55,7 @@ We will use [__p5.js__ ](https://p5js.org/) for the front end. It’s a high lev
 
 
 ### Code editor
-If you don’t have a code editor installed please install one. Some suggestions (in no particular order)
+If you don’t have a code editor, please install one. Some suggestions (in no particular order)
 - [Sublime Text](https://www.sublimetext.com)
 - [Visual Studio](https://code.visualstudio.com)
 - [Atom](https://atom.io) 
