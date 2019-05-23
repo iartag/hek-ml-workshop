@@ -27,7 +27,9 @@ function setup() {
 };
 
 function draw() {
-    image(capture, 0, 0)
+    // image(capture, 0, 0)
+    liveStream = utils.getLiveStream('http://10.10.4.129:8081')
+    image(liveStream, 0, 0)
     utils.drawText(im2txtCaption, 20, height - 40, 20, font)    
     if (poseNetPoses && poseNetPoses[0]) {
         tracker = getPartPosition(poseNetPoses[0].keypoints, "nose")
@@ -68,14 +70,20 @@ function keyReleased() {
 
 // Send the current capture image to the model
 function sendImageToPoseNet() {
-    const image = utils.captureAndEncodeCanvas(capture)    
-    models['poseNet'].input({ image })
+    utils.captureAndEncodeLiveStream(liveStream).then(image => {
+        models['poseNet'].input({ image })
+    })    
+    // const image = utils.captureAndEncodeCanvas(capture)    
+    // models['poseNet'].input({ image })
 }
 
 // Send the current capture image to the model
 function sendImageToIm2txt() {
-    const image = utils.captureAndEncodeCanvas(capture)    
-    models['im2txt'].input({ image })
+    utils.captureAndEncodeLiveStream(liveStream).then(image => {
+        models['im2txt'].input({ image })
+    })        
+    // const image = utils.captureAndEncodeCanvas(capture)    
+    // models['im2txt'].input({ image })
 }
 
 function refreshLettersChain(txt) {

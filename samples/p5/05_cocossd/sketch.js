@@ -18,27 +18,26 @@ function draw() {
     // liveStream = utils.getLiveStream('http://10.10.4.98:8081')
     // image(liveStream, 0, 0)    
     image(capture, 0, 0)
-    drawClasses(cocoSSDResults)
+    if (cocoSSDResults)
+        drawClasses(cocoSSDResults)
 };
 
 // Draw the text
 function drawClasses(results) {
-    if (results) {
-        for (result of results) {
-            if (result.bbox) {
-                // bbox holds the coordinate of the bounding box
-                const x = result.bbox[0]
-                const y = result.bbox[1]
-                const w = result.bbox[2]
-                const h = result.bbox[3]
-                // class holds the label of the class
-                const label = result.class
-                push() // Start a new drawing state
-                    translate(x, y)
-                    drawBox(w, h)
-                    drawText(label)
-                pop() // Restore original state
-            }
+    for (result of results) {
+        if (result.bbox) {
+            // bbox holds the coordinate of the bounding box
+            const x = result.bbox[0]
+            const y = result.bbox[1]
+            const w = result.bbox[2]
+            const h = result.bbox[3]
+            // class holds the label of the class
+            const label = result.class
+            push() // Start a new drawing state
+                translate(x, y)
+                drawBox(w, h)
+                drawText(label)
+            pop() // Restore original state
         }
     }
 }

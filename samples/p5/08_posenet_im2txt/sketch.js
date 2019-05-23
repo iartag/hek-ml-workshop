@@ -4,7 +4,7 @@ let im2txtCaption
 let capture
 let font;
 
-let im2txtInterval = setInterval(sendImageToIm2txt, 5000);
+setInterval(sendImageToIm2txt, 5000);
 
 // Preload fonts
 function preload() {
@@ -19,12 +19,17 @@ function setup() {
 
 function draw() {
     background(0)
-    image(capture, 0, 0)
+    // image(capture, 0, 0)
+    liveStream = utils.getLiveStream('http://10.10.4.129:8081')
+    image(liveStream, 0, 0)
+
     if (im2txtCaption && poseNetPoses) {
-        drawPoses(poseNetPoses, ["leftWrist", "rightWrist"])        
-        const point1 = getPartPosition(poseNetPoses[0].keypoints, "leftWrist")
-        const point2 = getPartPosition(poseNetPoses[0].keypoints, "rightWrist")        
-        drawInteractiveText(point1, point2)
+        // drawPoses(poseNetPoses, ["leftWrist", "rightWrist"])
+        if (poseNetPoses[0]) {
+            const point1 = getPartPosition(poseNetPoses[0].keypoints, "leftWrist")
+            const point2 = getPartPosition(poseNetPoses[0].keypoints, "rightWrist")        
+            drawInteractiveText(point1, point2)            
+        }
     }
 };
 
@@ -96,12 +101,18 @@ function keyReleased() {
 
 // Send the current capture image to the model
 function sendImageToPoseNet() {
-    const image = utils.captureAndEncodeCanvas(capture)    
-    models['poseNet'].input({ image })
+    utils.captureAndEncodeLiveStream(liveStream).then(image => {
+        models['poseNet'].input({ image })
+    })    
+    // const image = utils.captureAndEncodeCanvas(capture)    
+    // models['poseNet'].input({ image })
 }
 
 // Send the current capture image to the model
 function sendImageToIm2txt() {
-    const image = utils.captureAndEncodeCanvas(capture)    
-    models['im2txt'].input({ image })
+    utils.captureAndEncodeLiveStream(liveStream).then(image => {
+        models['im2txt'].input({ image })
+    })        
+    // const image = utils.captureAndEncodeCanvas(capture)    
+    // models['im2txt'].input({ image })
 }

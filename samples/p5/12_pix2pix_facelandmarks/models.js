@@ -1,7 +1,7 @@
 // Change this part
 const RUNWAY_HOST = 'http://localhost'
-const PIX2PIX_PORT = 3000
-const FACELANDMARKS_PORT = 3001
+const PIX2PIX_PORT = 3001
+const FACELANDMARKS_PORT = 3000
 const models = {}
 
 models['pix2pix'] = new RunwayModel(`${RUNWAY_HOST}:${PIX2PIX_PORT}`)
@@ -15,6 +15,6 @@ models['pix2pix'].output((data) => {
 
 models['faceLandmarks'].output((data) => {
     faceLandmarks = data.landmarks
-    console.log('[faceLandmarks] 🤡 Received some coordinate')
+    // console.log('[faceLandmarks] 🤡 Received some coordinate')
     sendImageToFaceLandmarks()
 })

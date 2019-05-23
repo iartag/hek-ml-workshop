@@ -11,7 +11,7 @@ function setup() {
 
 function draw() {
     image(capture, 0, 0)
-    // liveStream = utils.getLiveStream('http://10.10.4.98:8081')
+    // liveStream = utils.getLiveStream('http://10.10.4.129:8081')
     // image(liveStream, 0, 0)
     if (styleTransferImage)
         image(styleTransferImage, width / 2, 0)
