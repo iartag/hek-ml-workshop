@@ -1,7 +1,7 @@
 // Change this part
 const RUNWAY_HOST = 'http://localhost'
-const IM2TXT_PORT = 3000
-const ATTNGAN_PORT = 3001
+const IM2TXT_PORT = 3001
+const ATTNGAN_PORT = 3000
 
 const models = {}
 

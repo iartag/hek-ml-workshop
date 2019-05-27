@@ -6,6 +6,7 @@ let attnGANImage
 let im2txtCaption
 let capture
 let font
+let liveStream
 
 // Preload fonts
 function preload() {
@@ -20,14 +21,16 @@ function setup() {
 }
 
 function draw() {
+    // background(51)
     tint(255)
-    image(capture, 0, 0)
-    tint(255, 100)
+    liveStream = utils.getLiveStream('http://10.10.4.129:8081')
+    image(liveStream, 0, 0, liveStream.width/2, liveStream.height/2)
+    tint(255, 50)
     if (attnGANImage)
         image(attnGANImage, capture.width, 0, capture.height, capture.height)
     tint(255)
     if (im2txtCaption)
-        utils.drawText(im2txtCaption, 20, capture.height - 40, 20, font)
+        utils.drawText(im2txtCaption, 20, liveStream.height/2 - 40, 20, font)
 }
 
 // Function called when a key is released
@@ -44,6 +47,10 @@ function sendTextToAttnGAN() {
 
 // Send the current capture image to the model
 function sendImageToIm2txt() {
-    const image = utils.captureAndEncodeCanvas(capture)
-    models['im2txt'].input({ image })
+    // const image = utils.captureAndEncodeCanvas(capture)
+    // models['im2txt'].input({ image })
+    utils.captureAndEncodeLiveStream(liveStream).then(image => {
+        models['im2txt'].input({ image })
+    })
+
 }

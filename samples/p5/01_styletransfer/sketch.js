@@ -1,3 +1,7 @@
+// New
+// - Introduce GUI
+// - Introduce key functions
+
 // TODO
 // - Fix blinking (change filter...)
 

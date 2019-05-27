@@ -27,7 +27,7 @@ function draw() {
         // drawPoses(poseNetPoses, ["leftWrist", "rightWrist"])
         if (poseNetPoses[0]) {
             const point1 = getPartPosition(poseNetPoses[0].keypoints, "leftWrist")
-            const point2 = getPartPosition(poseNetPoses[0].keypoints, "rightWrist")        
+            const point2 = getPartPosition(poseNetPoses[0].keypoints, "rightWrist")
             drawInteractiveText(point1, point2)            
         }
     }

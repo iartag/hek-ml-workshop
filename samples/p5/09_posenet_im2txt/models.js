@@ -1,6 +1,6 @@
 // Change this part
 const RUNWAY_HOST = 'http://localhost'
-const POSENET_PORT = 3000
+const POSENET_PORT = 3002
 const IM2TXT_PORT = 3001
 
 const models = {}
